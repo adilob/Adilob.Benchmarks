@@ -11,7 +11,8 @@ namespace Adilob.Benchmarks
 
 		static async Task BenchmarkProducts()
 		{
-			var summary = BenchmarkRunner.Run<Products.Benchmarks>();
+			BenchmarkRunner.Run<Products.Benchmarks>();
+			BenchmarkRunner.Run<EndsWith.Benchmarks>();
 		}
 	}
 }

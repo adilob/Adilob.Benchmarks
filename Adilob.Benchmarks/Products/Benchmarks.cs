@@ -4,10 +4,9 @@ using BenchmarkDotNet.Engines;
 namespace Adilob.Benchmarks.Products
 {
 	[SimpleJob(RunStrategy.ColdStart, iterationCount: 5)]
-	[MemoryDiagnoser]
 	public class Benchmarks
 	{
-		[Benchmark]
+		[Benchmark(Baseline = true)]
 		public Product? FirstMethod()
 		{
 			var productRepository = new ProductRepository();
